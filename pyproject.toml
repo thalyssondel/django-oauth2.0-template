@@ -31,8 +31,10 @@ dev = [
 ]
 
 [tool.ruff]
-line-length = 88
+line-length = 120
 target-version = "py312"
+
+exclude = ["**/migrations/*.py"]
 
 [tool.ruff.lint]
 # E, F = Erros básicos e PEP8
