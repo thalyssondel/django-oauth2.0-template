@@ -29,3 +29,20 @@ package = false
 dev = [
     "ruff>=0.15.2",
 ]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+exclude = ["**/migrations/*.py"]
+
+[tool.ruff.lint]
+# E, F = Erros básicos e PEP8
+# B = Bugs comuns (Bugbear)
+# S = Segurança (Bandit)
+# I = Organização de Imports
+select = ["E", "F", "B", "S", "I"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"] # Permite o uso de 'assert' em arquivos de teste
