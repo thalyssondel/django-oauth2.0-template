@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from core.views import health_check
 
 urlpatterns = [
     # App
+    path('health/', health_check, name='health_check'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
 
