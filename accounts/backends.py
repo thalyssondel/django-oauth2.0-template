@@ -6,5 +6,5 @@ class BanCheckBackend(ModelBackend):
         user = super().authenticate(request, username, password, **kwargs)
 
         if user and getattr(user, 'is_banned', False):
-            raise PermissionDenied('Your account is banned')
+            raise PermissionDenied('Your account has been banned')
         return user

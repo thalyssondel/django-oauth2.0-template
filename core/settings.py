@@ -206,6 +206,7 @@ SOCIALACCOUNT_EMAIL_AUTHENTICATION = True
 SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = True
 SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_ADAPTER = 'accounts.adapter.BlockAdminAdapter'
+ACCOUNT_ADAPTER = 'accounts.adapter.BlockAccountAdapter'
 
 # Variavel temporaria enquanto n implemento o STMP AKSAKSAKSKASKSASA
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
