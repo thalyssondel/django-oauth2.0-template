@@ -23,3 +23,14 @@ def health_check(request):
             return JsonResponse(health_status, status=503)
 
     return JsonResponse(health_status, status=200)
+
+
+def custom_404(request, exception):
+    return JsonResponse({"error": "NotFound", "message": "The requested endpoint was not found."}, status=404)
+
+
+def custom_500(request):
+    return JsonResponse(
+        {"error": "InternalServerError", "message": "A server error occurred. Please contact the administrator."},
+        status=500,
+    )
