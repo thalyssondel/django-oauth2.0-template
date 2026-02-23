@@ -141,12 +141,7 @@ REST_FRAMEWORK = {
         "rest_framework.throttling.UserRateThrottle",
         "rest_framework.throttling.ScopedRateThrottle",
     ],
-    "DEFAULT_THROTTLE_RATES": {
-        "anon": "5/minute",
-        "user": "5000/day",
-        "dj_rest_auth": "5/minute"
-    },
-
+    "DEFAULT_THROTTLE_RATES": {"anon": "5/minute", "user": "5000/day", "dj_rest_auth": "5/minute"},
     "EXCEPTION_HANDLER": "core.exceptions.custom_exception_handler",
 }
 
