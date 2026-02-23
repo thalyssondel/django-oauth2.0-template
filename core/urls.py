@@ -25,3 +25,6 @@ urlpatterns = [
     ),
     path("api/docs/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
 ]
+
+handler404 = "core.views.custom_404"
+handler500 = "core.views.custom_500"
